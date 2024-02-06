@@ -39,22 +39,22 @@ export default function Constact(props) {
     e.preventDefault();
     console.log("Sending Email");
 
-    // emailjs
-    //   .sendForm(
-    //     "service_chwkmbo",
-    //     "template_9p2imej",
-    //     form.current,
-    //     "NHoQwlFQpc2euGO3O"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       console.log("Success");
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_chwkmbo",
+        "template_9p2imej",
+        form.current,
+        "NHoQwlFQpc2euGO3O"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Success");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   useEffect(() => {
