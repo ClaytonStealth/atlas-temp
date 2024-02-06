@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-scroll";
 import { validator } from "./lib/validator";
-import contactButton from "./assets/contactButton.svg";
+import { FaChevronRight } from "react-icons/fa";
 
 export default function Constact(props) {
+  const [tyMessage, setTyMessage] = useState("");
   const form = useRef();
   const [rsvpState, setRsvpState] = useState({
     user_email: "",
@@ -80,7 +80,7 @@ export default function Constact(props) {
       setShakeFields(fieldsToShake);
     } else {
       // No errors, proceed with sending email
-      props.setTyMessage(`Thank you ${rsvpState.user_fName}!`);
+      setTyMessage(`Thank you ${rsvpState.user_fName}!`);
       sendEmail(e);
     }
     e.preventDefault();
@@ -164,11 +164,13 @@ export default function Constact(props) {
 
         <button
           type="submit"
-          className="w-full py-3 flex justify-center items-center mt-8 text-white rounded-md"
+          className="group text-xl font-extrabold w-full py-3 flex justify-center items-center mt-8 bg-white text-black rounded-lg"
           onClick={handleButtonClick}
         >
-          <img src={contactButton} alt="" />
+          CLICK TO SUBMIT
+          <FaChevronRight className=" group-hover:translate-x-2 duration-300 ml-4" />
         </button>
+        {tyMessage && <p className="text-center mt-4 text-white font-bold">{tyMessage}</p>}
       </form>
     </div>
   );

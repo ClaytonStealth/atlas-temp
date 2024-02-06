@@ -1,8 +1,7 @@
 import React from "react";
 import atlas_w_nobg from "./assets/atlas-white-nobg-bgr.png";
 import { Link } from "react-scroll";
-import link from "./assets/Link.svg";
-
+import {FaChevronRight} from "react-icons/fa"
 const Hero = () => {
   return (
     <div
@@ -23,8 +22,8 @@ const Hero = () => {
             <h1 className='text-white text-4xl sm:text-6xl font-bold text-center'>
               EMPOWER
             </h1>
-            <Link to='rsvp' smooth={true} duration={1000} className="mt-4">
-              <img src={link} alt="" />
+            <Link to='rsvp' smooth={true} duration={1000} className="mt-8 group">
+              <button className="flex justify-center items-center bg-white rounded-lg px-4 py-2">Coming Soon <FaChevronRight className=" group-hover:translate-x-2 duration-300 ml-4"/></button>
             </Link>
           </div>
         </div>
