@@ -161,15 +161,17 @@ export default function Constact(props) {
             onChange={onChangeHandler}
           />
         </div>
-
+            <div className="flex justify-center items-center">
         <button
           type="submit"
-          className="group text-xl font-extrabold w-full py-3 flex justify-center items-center mt-8 bg-white text-black rounded-lg"
+          className="group text-lg h-[40px] font-bold py-3 flex justify-center items-center mt-8 bg-white text-black rounded-lg w-[180px]"
           onClick={handleButtonClick}
         >
-          CLICK TO SUBMIT
+          SUBMIT
           <FaChevronRight className=" group-hover:translate-x-2 duration-300 ml-4" />
         </button>
+
+            </div>
         {tyMessage && <p className="text-center mt-4 text-white font-bold">{tyMessage}</p>}
       </form>
     </div>

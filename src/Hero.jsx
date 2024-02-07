@@ -23,7 +23,7 @@ const Hero = () => {
               EMPOWER
             </h1>
             <Link to='rsvp' smooth={true} duration={1000} className="mt-8 group">
-              <button className="flex justify-center items-center bg-white rounded-lg px-4 py-2">Coming Soon <FaChevronRight className=" group-hover:translate-x-2 duration-300 ml-4"/></button>
+              <button className="flex justify-center items-center bg-white rounded-lg px-4 py-2 font-bold text-lg">Coming Soon <FaChevronRight className=" group-hover:translate-x-2 duration-300 ml-4"/></button>
             </Link>
           </div>
         </div>
